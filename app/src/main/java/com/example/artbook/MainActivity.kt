@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         dbconnect()
     }
 
-    //new commit
+    //new commit 2
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val menuInflater = menuInflater
         menuInflater.inflate(R.menu.add_art, menu)
