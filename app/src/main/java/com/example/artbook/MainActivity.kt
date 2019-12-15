@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         dbconnect()
     }
 
+    //new commit
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val menuInflater = menuInflater
         menuInflater.inflate(R.menu.add_art, menu)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.add_art_item) {
             val intent = Intent(this, ProfilActivity::class.java)
-            intent.putExtra("info","new")
+            intent.putExtra("info", "new")
             startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
@@ -65,10 +66,10 @@ class MainActivity : AppCompatActivity() {
         } catch (ex: Exception) {
             println(ex.printStackTrace())
         }
-        lv.onItemClickListener=AdapterView.OnItemClickListener { parent, view, position, id ->
-            val intent=Intent(this,ProfilActivity::class.java)
-            intent.putExtra("info","old")
-            intent.putExtra("id",artIdList[position])
+        lv.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val intent = Intent(this, ProfilActivity::class.java)
+            intent.putExtra("info", "old")
+            intent.putExtra("id", artIdList[position])
             startActivity(intent)
         }
 
